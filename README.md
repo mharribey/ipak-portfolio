@@ -22,3 +22,13 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Pour récupérer code avant de push ses modifications :
+
+- git stash // Met ses modifications locales de côté
+- git pull // Récupère les éventuelles mises à jour sur le repo
+- git stash apply // Récupère ses modifications locales
+- Résoudre les éventuels conflits
+- git add . // Ajoute les modifications
+- git commit…
+- git push
