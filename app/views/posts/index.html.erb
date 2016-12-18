@@ -1,29 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Posts</h2>
+<h2 style='text-align:center'>Posts</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div id="main">
+  
+  <% @posts.each do |post| %>
+    <div id="post">
+      <figure>
+            <p><strong>Title : </strong><%= post.title %></p>
+            <p><strong>Description : </strong><%= post.description %></p>
+            <figcaption> Ceci est une description d'objet </figcaption>
+      </figure>
+    </div>
+  <% end %>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.description %></td>
-        <!-- <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+</div>
 
-<br>
 
 <!-- <%= link_to 'New Post', new_post_path %> -->
