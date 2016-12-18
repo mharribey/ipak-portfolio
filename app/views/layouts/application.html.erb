@@ -9,12 +9,15 @@
   </head>
 
   <body>
-
+<div id="nav">
+    <h1 class='item' > Ipak - Portfolio </h1>
+    <%= link_to "Profil", edit_user_registration_path, class: "item" %>
     <% if current_user %>
-      <%= link_to 'Logout', destroy_user_session_path, method: :delete%>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'item'%>
     <% else %>
-      <%= link_to 'Login', new_user_session_path %>
+      <%= link_to 'Login', new_user_session_path, class: 'item' %>
     <% end %>
+</div>
 
     <%= yield %>
 
