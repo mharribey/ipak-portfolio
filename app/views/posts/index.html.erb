@@ -3,18 +3,15 @@
 <h2 style='text-align:center'>Posts</h2>
 
 <div id="main">
-  
+
   <% @posts.each do |post| %>
     <div id="post">
       <figure>
-            <p><strong>Title : </strong><%= post.title %></p>
+            <p><strong>Title : </strong><%= post.title %></p><br>
             <p><strong>Description : </strong><%= post.description %></p>
-            <figcaption> Ceci est une description d'objet </figcaption>
+            <figcaption> On pourra ajouter des infos sup. ici </figcaption>
       </figure>
     </div>
   <% end %>
 
 </div>
-
-
-<!-- <%= link_to 'New Post', new_post_path %> -->
