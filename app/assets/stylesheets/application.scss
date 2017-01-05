@@ -36,8 +36,10 @@ html {
         padding: 3vh 0;
 
         h1 {
-            font-size: 2em;
-            border-right: 1px solid #4A4A4A;
+            font-size: 5em;
+            border-right: 1px solid white;
+            font-family: 'Fjalla One', sans-serif;
+
         }
 
         .item {
@@ -59,15 +61,14 @@ html {
             width: 15vh;
 
             .list-post-title {
-                font-size: 1em;
+                font-size: 0.8em;
                 display: block;
                 text-align: left;
                 margin: 1vh;
                 transition: 0.3s;
 
                 &:hover {
-                    font-size: 1.14em;
-                    color:#1794AC;
+                    font-size: 0.9em;
                 }
             }
         }
