@@ -1,25 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<h2 style='text-align:center;margin:4vh;'>Posts</h2>
-
 <div id='main'>
 
     <div id="list-posts">
         <% @posts.each do |t| %>
-          <p class='list-post-title'> > <%= link_to t.title, post_path(t) %> </p>
+        <p class='list-post-title'>
+            > <%= link_to t.title, post_path(t) %>
+        </p>
         <% end %>
     </div>
 
     <div id="posts-container">
-      <% @posts.each do |post| %>
-        <div id="post">
-          <figure>
-                <p><strong>Title : </strong><%= post.title %></p><br>
-                <p><strong>Description : </strong><%= post.description %></p><br>
-                <figcaption> <%= image_tag(post.image) %> </figcaption>
-          </figure>
+        <div id="column">
+            <% @posts.each do |post| %>
+            <div id="post">
+                <figure>
+                    <figcaption>
+                        <%= image_tag(post.image) %>
+                    </figcaption>
+                    <p id="titre"><%= post.title %></p><br>
+                    <p id="article"><%= post.description %></p><br>
+                </figure>
+            </div>
+            <% end %>
         </div>
-      <% end %>
     </div>
 
 </div>
