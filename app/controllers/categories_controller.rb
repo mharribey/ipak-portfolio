@@ -4,6 +4,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
+    @posts = Post.all
     @categories = Category.all
   end
 
@@ -11,6 +12,8 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @category = Category.find(params[:id])
+    @categories = Category.all
+    @posts = @category.posts
   end
 
   # GET /categories/new

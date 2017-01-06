@@ -4,17 +4,18 @@
 
     <div id="list-posts">
         <% @categories.each do |c| %>
-        <p class='list-post-title'>
-            > <%= link_to c.name, root_path %>
-        </p>
+          <p class='list-post-title'>
+              > <%= link_to c.name, category_path(c) %>
+          </p>
         <% end %>
     </div>
 
     <div id="posts-container">
         <div id="column">
-            <% @posts.each do |post| %>
+          <% @posts.each do |post| %>
+
             <div id="post">
-                <figure>
+                  <figure>
                     <figcaption>
                         <% if !post.image.blank? %>
                           <%= image_tag(post.image) %>
@@ -27,10 +28,12 @@
                         <% end %>
 
                     </figcaption>
-                    <p id="titre"><%= post.title %></p><br>
-                    <p id="article"><%= post.description %></p><br>
+                    <a href="<%= post_path(post) %>" class="post-content">
+                      <p id="titre"><%=post.title %></p><br>
+                      <p id="article"><%= post.description %></p><br>
+                    </a>
                 </figure>
-            </div>
+              </div>
             <% end %>
         </div>
     </div>

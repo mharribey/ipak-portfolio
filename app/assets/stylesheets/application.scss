@@ -23,10 +23,13 @@ html {
     body {
         background-color: #121212;
 
-        .list-post-title,
-        a,
-        h1 {
+        .list-post-title,a,h1,h2 {
             color: white;
+        }
+
+        h2 {
+          text-align: center;
+          margin:5vh 0;
         }
 
         #nav {
@@ -38,12 +41,22 @@ html {
                 font-size: 5em;
                 border-right: 1px solid white;
                 font-family: 'Anton', sans-serif;
+
+                a {
+                  transition: 0.3s;
+
+                  &:hover {
+                    color: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+                    color:rgb(220, 220, 220);
+                  }
+                }
             }
 
             .item {
                 display: inline-block;
                 vertical-align: middle;
                 padding: 0 4vh;
+
             }
         }
 
@@ -67,6 +80,9 @@ html {
 
                     &:hover {
                         font-size: 0.9em;
+                        a:hover {
+                        color:white;
+                      }
                     }
                 }
             }
@@ -90,6 +106,7 @@ html {
                     column-gap: 1vh;
                     column-fill: auto;
                     margin: 0;
+
                 }
 
                 #post {
@@ -166,6 +183,11 @@ html {
                             }
                         }
 
+                        .post-content:hover, .post-content:visited, .post-content:focus  {
+                          color:black;
+                        }
+
+
                         iframe {
                             height: 22vh;
                             width: auto;
@@ -175,11 +197,36 @@ html {
             }
         }
 
+
+        #post-show {
+          background: #FEFEFE;
+          background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+          border: 2px solid #f2f2f2;
+          border-radius: 4px;
+          text-align: center;
+          margin: 1vh auto;
+          width: 70%;
+          height: auto;
+          text-align: center;
+          -webkit-column-break-inside: avoid;
+          -moz-column-break-inside: avoid;
+          column-break-inside: avoid;
+          position: relative;
+          opacity: 1;
+          -webkit-transition: all 0.2s ease;
+          -moz-transition: all 0.2s ease;
+          -o-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+
         #img-show {
             img {
                 width: 40vh;
                 height: auto;
             }
+          }
+
+
+
         }
         @media (min-width: 960px) {
             #column {
@@ -198,6 +245,17 @@ html {
 
         #connect {
             font-weight: 100;
+            margin: 2vh auto auto;
+            width: 50vh;
+            text-align: center;
+            vertical-align: middle;
+            height: 45vh;
+            border-radius: 10px;
+            transition: 0.2s;
+            color: white;
+            position: relative;
+            font-family: 'Archivo Narrow', sans-serif;
+            font-size: 1.2em;
 
             svg {
                 height: 45vh;
@@ -225,17 +283,7 @@ html {
                     transition: all 1.3s cubic-bezier(0.19, 1, 0.22, 1);
                 }
             }
-            margin: 2vh auto auto;
-            width: 50vh;
-            text-align: center;
-            vertical-align: middle;
-            height: 45vh;
-            border-radius: 10px;
-            transition: 0.2s;
-            color: white;
-            position: relative;
-            font-family: 'Archivo Narrow', sans-serif;
-            font-size: 1.2em;
+
 
             #champs {
                 height: 30vh;
@@ -250,15 +298,14 @@ html {
                     border-right: 0;
                     color: white;
                     margin-bottom: 4vh;
-                    width: 3vh;
+                    width: 6vh;
                     transition: 0.2s;
                     text-align: center;
                     padding-bottom: 5px;
                     font-family: 'Archivo Narrow', sans-serif;
                     font-size: 0.9em;
 
-                    &:focus,
-                    &:hover {
+                    &:focus {
                         outline: none;
                         width: 20vh;
                     }

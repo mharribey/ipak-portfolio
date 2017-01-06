@@ -1,9 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+<h2> <%= @category.name %> </h2>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div id='main'>
+
+    <div id="list-posts">
+        <% @categories.each do |c| %>
+        <p class='list-post-title'>
+            > <%= link_to c.name, root_path(c) %>
+        </p>
+
+        <% end %>
+    </div>
+
+    <div id="posts-container">
+        <div id="column">
+            <% @posts.each do |post| %>
+            <div id="post">
+                <figure>
+                    <figcaption>
+                        <% if !post.image.blank? %>
+                          <%= image_tag(post.image) %>
+                        <% elsif !post.video.blank? %>
+                        <iframe width="560" height="315" src="<%= post.video.gsub(/watch\?v=/, "embed/") %>" frameborder="0" allowfullscreen>
+                          <p>La vidéo ne se charge pas, veuillez actualisez la page !</p>
+                        </iframe>
+                        <% else %>
+                          <p></p>
+                        <% end %>
+
+                    </figcaption>
+                    <a href="<%= post_path(post) %>" class="post-content">
+                      <p id="titre"><%= post.title %></p><br>
+                      <p id="article"><%= post.description %></p><br>
+                    </a>
+                </figure>
+            </div>
+            <% end %>
+        </div>
+    </div>
+
+</div>
