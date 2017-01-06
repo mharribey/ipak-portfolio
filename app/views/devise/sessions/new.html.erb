@@ -1,21 +1,31 @@
-<h2>Log in</h2>
+<!-- espace log in, connexion -> cacher le lien menant à cette page  -->
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+<div id="connect">
+
+  <div id="champs">
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+        <%= f.label :email, "Email" %><br/>
+        <%= f.email_field :email, autofocus: true, class:"logyou", placeholder:"..." %>
+    </div>
+
+    <div class="field">
+        <%= f.label :password, "Mot de passe" %><br/>
+        <%= f.password_field :password, autocomplete: "off", placeholder:"...",  class:"logyou" %>
+    </div>
+
+    <div class="actions">
+        <%= f.submit "GO !", class:"button" %>
+    </div>
+    <% end %>
   </div>
+  <svg>
+        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+      </svg>
+</div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= link_to "Retour à l'accueil", root_path %>
-<br/>
-<%= render "devise/shared/links" %>
+<div id="downlinks">
+<%= link_to image_tag("home.png", style:'height: 20px;'), root_path, id:"link1"%>
+<%= render "devise/shared/links", id:"link2" %>
+</div>
