@@ -19,7 +19,7 @@
                         <% if !post.image.blank? %>
                           <%= image_tag(post.image) %>
                         <% elsif !post.video.blank? %>
-                        <iframe width="560" height="315" src="<%= post.video %>" frameborder="0" allowfullscreen>
+                        <iframe width="560" height="315" src="<%= post.video.gsub(/watch\?v=/, "embed/") %>" frameborder="0" allowfullscreen>
                           <p>La vidéo ne se charge pas, veuillez actualisez la page !</p>
                         </iframe>
                         <% else %>
