@@ -3,9 +3,9 @@
 <div id='main'>
 
     <div id="list-posts">
-        <% @posts.each do |t| %>
+        <% @categories.each do |c| %>
         <p class='list-post-title'>
-            > <%= link_to t.title, post_path(t) %>
+            > <%= link_to c.name, root_path %>
         </p>
         <% end %>
     </div>
