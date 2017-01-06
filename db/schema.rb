@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20161217154802) do
     t.string   "title"
     t.string   "description"
     t.string   "image"
+    t.string   "video"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

@@ -16,8 +16,16 @@
             <div id="post">
                 <figure>
                     <figcaption>
-                        <%= image_tag(post.image) %>
-                        <%= video_tag(post.video) %>
+                        <% if !post.image.blank? %>
+                          <%= image_tag(post.image) %>
+                        <% elsif !post.video.blank? %>
+                        <iframe width="560" height="315" src="<%= post.video %>" frameborder="0" allowfullscreen>
+                          <p>La vidéo ne se charge pas, veuillez actualisez la page !</p>
+                        </iframe>
+                        <% else %>
+                          <p></p>
+                        <% end %>
+
                     </figcaption>
                     <p id="titre"><%= post.title %></p><br>
                     <p id="article"><%= post.description %></p><br>
