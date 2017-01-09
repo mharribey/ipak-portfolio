@@ -1,6 +1,4 @@
-<p id="notice"><%= notice %></p>
 
-<p style='text-align:center;'><%= link_to 'Retour', posts_path %>
 
 <div id='post-show'>
       <p id="img-show">
@@ -15,13 +13,15 @@
         <% end %>
       </p>
 
-      <p>
-        <strong>Title:</strong>
-        <%= @post.title %>
+      <p id="titreshow">
+        <strong><%= @post.title %></strong>
       </p>
 
-      <p>
-        <strong>Description:</strong>
-        <%= @post.description %>
+      <p id="descriptionshow">
+          <em><%= @post.description %></em>
       </p>
+
   </div>
+
+
+        <p style='text-align:center;'><%= link_to image_tag("back.png", style:"height: 30px;"), posts_path, id:"back" %>

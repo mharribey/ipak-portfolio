@@ -21,26 +21,35 @@ html {
     top: 0;
 
     body {
-        background-color: #121212;
+        background-color: rgb(251, 251, 251);
 
-        .list-post-title,a,h1,h2 {
-            color: white;
+        a{
+          text-decoration: none;
         }
+
+        .list-post-title,a {
+            color: black;
+        }
+
+
 
         h2 {
           text-align: center;
-          margin:5vh 0;
+          margin:4vh 0;
+          font-family: 'Slabo 27px', serif;
+          color: rgb(255, 0, 0)
+
         }
 
         #nav {
             height: auto;
             width: 100%;
-            padding: 3vh 0;
+            padding: 0vh 0 3vh 0vh;
 
             h1 {
-                font-size: 5em;
-                border-right: 1px solid white;
-                font-family: 'Anton', sans-serif;
+                font-size: 4em;
+                border-right: 1px solid rgb(255, 0, 0);
+                color: rgb(255, 0, 0);
 
                 a {
                   transition: 0.3s;
@@ -56,8 +65,33 @@ html {
                 display: inline-block;
                 vertical-align: middle;
                 padding: 0 4vh;
+                font-family: 'Slabo 27px', serif;
+
+                &:hover {
+                  color: rgb(255, 0, 0);
+                }
+
 
             }
+
+
+            #itemtitle {
+              color: rgb(255, 0, 0);
+              font-family: 'Playfair Display', serif;
+
+            }
+
+            #contact {
+              display: inline-block;
+              width: 20%;
+              margin-left: 40%;
+              height: auto;
+              text-align: right;
+              vertical-align: baseline;
+              padding: 30px 0px;
+
+            }
+
         }
 
         #main {
@@ -71,17 +105,20 @@ html {
                 margin-right: 3vh;
                 width: 15vh;
 
+
                 .list-post-title {
-                    font-size: 0.8em;
+                    font-size: 1em;
                     display: block;
                     text-align: left;
                     margin: 1vh;
                     transition: 0.3s;
+                    font-family: 'Slabo 27px', serif;
+
 
                     &:hover {
-                        font-size: 0.9em;
+                        font-size: 1.1em;
                         a:hover {
-                        color:white;
+                        color: rgb(255, 0, 0);
                       }
                     }
                 }
@@ -110,13 +147,12 @@ html {
                 }
 
                 #post {
-                    background: #FEFEFE;
                     background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
-                    border: 2px solid #f2f2f2;
-                    border-radius: 4px;
+                    border: 1px solid #c8c8c8;
+                    border-radius: 2px;
                     display: inline-block;
                     text-align: center;
-                    margin: 1vh;
+                    margin: 0;
                     width: 95%;
                     height: auto;
                     -webkit-column-break-inside: avoid;
@@ -125,13 +161,14 @@ html {
                     vertical-align: top;
                     position: relative;
                     opacity: 1;
-                    -webkit-transition: all 0.2s ease;
-                    -moz-transition: all 0.2s ease;
-                    -o-transition: all 0.2s ease;
-                    transition: all 0.2s ease;
+                    -webkit-transition: all 0.4s ease;
+                    -moz-transition: all 0.4s ease;
+                    -o-transition: all 0.4s ease;
+                    transition: all 0.4s ease;
 
                     &:hover {
-                        border: 2px solid #d3d3d3;
+                        border: 1px solid rgb(255, 0, 0);
+
                     }
 
                     figure {
@@ -144,19 +181,14 @@ html {
                             font-weight: 600;
                             font-size: 1.2em;
                             font-family: 'Slabo 27px', serif;
+                            color: black;
                         }
 
                         p {
                             margin: 0;
                         }
 
-                        #titre {
-                            text-align: left;
-                            margin-left: 2vh;
-                            font-weight: 600;
-                            font-size: 1.2em;
-                            font-family: 'Slabo 27px', serif;
-                        }
+
 
                         #article {
                             text-align: left;
@@ -166,6 +198,7 @@ html {
                             margin-left: 2vh;
                             font-family: 'Slabo 27px', serif;
                             font-style: italic;
+                            color: black;
                         }
 
                         figcaption {
@@ -201,13 +234,11 @@ html {
         #post-show {
           background: #FEFEFE;
           background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
-          border: 2px solid #f2f2f2;
-          border-radius: 4px;
-          text-align: center;
+          border: 1px solid rgb(255, 0, 0);
+          border-radius: 2px;
           margin: 1vh auto;
-          width: 70%;
+          width: 50%;
           height: auto;
-          text-align: center;
           -webkit-column-break-inside: avoid;
           -moz-column-break-inside: avoid;
           column-break-inside: avoid;
@@ -220,13 +251,45 @@ html {
 
         #img-show {
             img {
-                width: 40vh;
+                width: auto;
                 height: auto;
             }
+            padding-bottom: 4vh;
+            border-bottom: 1px rgb(255, 0, 0) solid;
+            text-align: center;
+
           }
 
+          #titreshow {
+            font-weight: 600;
+            font-size: 1.5em;
+            font-family: 'Slabo 27px', serif;
+            display: block;
+            margin-bottom: 0;
 
 
+          }
+
+          #descriptionshow {
+            font-family: 'Slabo 27px', serif;
+            display: block;
+            height: auto;
+            width: 75%;
+            margin:auto;
+            margin-top: 2vh;
+            margin-bottom: 4vh;
+
+
+          }
+        }
+
+        #back {
+          filter: grayscale(100%);
+          transition: 0.3s;
+
+          &:hover {
+            filter: none;
+          }
         }
         @media (min-width: 960px) {
             #column {
@@ -252,9 +315,9 @@ html {
             height: 45vh;
             border-radius: 10px;
             transition: 0.2s;
-            color: white;
+            color: black;
             position: relative;
-            font-family: 'Archivo Narrow', sans-serif;
+            font-family: 'Slabo 27px', serif;
             font-size: 1.2em;
 
             svg {
@@ -267,7 +330,7 @@ html {
 
             rect {
                 fill: none;
-                stroke: white;
+                stroke: rgb(255, 0,  0);
                 stroke-width: 5;
                 stroke-dasharray: 422, 0;
             }
@@ -292,17 +355,17 @@ html {
                 .logyou {
                     background-color: transparent;
                     border-radius: 2px;
-                    border-bottom: 2px white solid;
+                    border-bottom: 2px rgb(255, 0, 0) solid;
                     border-top: 0;
                     border-left: 0;
                     border-right: 0;
-                    color: white;
+                    color: black;
                     margin-bottom: 4vh;
                     width: 6vh;
                     transition: 0.2s;
                     text-align: center;
                     padding-bottom: 5px;
-                    font-family: 'Archivo Narrow', sans-serif;
+                    font-family: 'Slabo 27px', serif;
                     font-size: 0.9em;
 
                     &:focus {
@@ -314,15 +377,15 @@ html {
                 .actions {
 
                   .button {
-                  background-color: white;
-                  border: none;
-                  font-family: 'Archivo Narrow', sans-serif;
+                  background-color: transparent;
+                  border: 1px solid rgb(255, 0, 0);
+                  font-family: 'Slabo 27px', serif;
                   font-size: 0.8em;
                   transition: 0.2s;
 
                   &:hover {
-                    background-color: transparent;
-                    border: 1px solid white;
+                    background-color: rgb(255, 0, 0);
+                    border: 1px solid rgb(255, 0, 0);
                     color: white;
                   }
 
@@ -340,13 +403,23 @@ html {
 
             #link1 {
                 padding-right: 3vh;
-                border-right: 2px solid white;
-                margin-right: 3vh;
+                filter: grayscale(100%);
+
+                &:hover {
+                  filter: none;
+                }
             }
 
             #link2 {
-                font-family: 'Archivo Narrow', sans-serif;
+              font-family: 'Slabo 27px', serif;
+              padding-left: 3vh;
+              border-left: 2px solid black;
+
                 font-size: 1.2em;
+
+                &:hover {
+                  color: rgb(255, 0, 0);
+                }
             }
         }
 
@@ -354,6 +427,9 @@ html {
             font-family: 'Archivo Narrow', sans-serif;
             font-size: 1.2em;
             padding-left: 3vh;
-        }
+          }
+
+
+
     }
 }
