@@ -134,13 +134,13 @@ html {
 
                 #column {
                     -webkit-column-count: 3;
-                    -webkit-column-gap: 1vh;
+                    -webkit-column-gap: 0px;
                     -webkit-column-fill: auto;
                     -moz-column-count: 3;
-                    -moz-column-gap: 1vh;
+                    -moz-column-gap: 0px;
                     -moz-column-fill: auto;
                     column-count: 3;
-                    column-gap: 1vh;
+                    column-gap: 0px;
                     column-fill: auto;
                     margin: 0;
 
@@ -154,7 +154,6 @@ html {
                     text-align: center;
                     margin: 0;
                     width: 95%;
-                    height: auto;
                     -webkit-column-break-inside: avoid;
                     -moz-column-break-inside: avoid;
                     column-break-inside: avoid;
@@ -222,8 +221,8 @@ html {
 
 
                         iframe {
-                            height: 22vh;
-                            width: auto;
+                            height: auto;
+                            width: 100%;
                         }
                     }
                 }
