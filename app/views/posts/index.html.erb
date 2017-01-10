@@ -14,8 +14,9 @@
           <% @posts.each do |post| %>
 
             <div id="post">
-                  <figure>
-                    <figcaption>
+              <a href="<%= post_path(post) %>" class="post-content">
+                    <figure>
+                      <figcaption>
                         <% if !post.image.blank? %>
                           <%= image_tag(post.image) %>
                         <% elsif !post.video.blank? %>
@@ -25,14 +26,12 @@
                         <% else %>
                           <p></p>
                         <% end %>
-
-                    </figcaption>
-
-                    <a href="<%= post_path(post) %>" class="post-content">
+                      </figcaption>
+                      
                       <p id="titre"><%=post.title %></p><br>
                       <p id="article"><%= post.description %></p><br>
-                    </a>
-                </figure>
+                  </figure>
+                </a>
               </div>
             <% end %>
         </div>

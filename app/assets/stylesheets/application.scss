@@ -48,7 +48,6 @@ html {
 
             h1 {
                 font-size: 4em;
-                border-right: 1px solid rgb(255, 0, 0);
                 color: rgb(255, 0, 0);
 
                 a {
@@ -70,8 +69,6 @@ html {
                 &:hover {
                   color: rgb(255, 0, 0);
                 }
-
-
             }
 
 
@@ -84,12 +81,11 @@ html {
             #contact {
               display: inline-block;
               width: 20%;
-              margin-left: 40%;
+              margin-left: 60%;
               height: auto;
               text-align: right;
               vertical-align: baseline;
               padding: 30px 0px;
-
             }
 
         }
@@ -250,11 +246,11 @@ html {
 
         #img-show {
             img {
-                width: auto;
+                width: 100%;
                 height: auto;
             }
             padding-bottom: 4vh;
-            border-bottom: 1px rgb(255, 0, 0) solid;
+            // border-bottom: 1px rgb(255, 0, 0) solid;
             text-align: center;
 
           }
@@ -264,9 +260,7 @@ html {
             font-size: 1.5em;
             font-family: 'Slabo 27px', serif;
             display: block;
-            margin-bottom: 0;
-
-
+            margin: 0 3vh;
           }
 
           #descriptionshow {
@@ -277,8 +271,6 @@ html {
             margin:auto;
             margin-top: 2vh;
             margin-bottom: 4vh;
-
-
           }
         }
 
@@ -343,6 +335,9 @@ html {
                     stroke-dasharray: 20, 310;
                     stroke-dashoffset: 48;
                     transition: all 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+                    -webkit-transition: all 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+                    -moz-transition: all 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+                    -o-transition: all 1.3s cubic-bezier(0.19, 1, 0.22, 1);
                 }
             }
 
@@ -423,12 +418,47 @@ html {
         }
 
         .link {
-            font-family: 'Archivo Narrow', sans-serif;
+            font-family: 'Slabo 27px', sans-serif;
             font-size: 1.2em;
             padding-left: 3vh;
           }
 
+        #footer {
+          width:100%;
+          margin: 5vh auto;
+          text-align: center;
+          font-weight: light;
+          font-family: 'Slabo 27px', sans-serif;
 
+          a {
+            padding:0;
+          }
 
-    }
+          p:before {
+              content:"";
+              display: block;
+              margin:3vh auto;
+              width:10%;
+              height:1px;
+              background-color: #4A4A4A;
+          }
+
+          #loglinks {
+            width: 50%;
+            margin:auto;
+
+            .item {
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0 4vh;
+                font-family: 'Slabo 27px', serif;
+
+                &:hover {
+                  color: rgb(255, 0, 0);
+                }
+            }
+          }
+        }
+
+  }
 }

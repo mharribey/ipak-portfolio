@@ -18,15 +18,8 @@
 
     <body>
         <div id="nav">
-            <h1 class='item'><%= link_to 'Ipak', root_path, id:"itemtitle" %>
-            </h1>
-            <% if current_user %>
-            <%= link_to "Admin", rails_admin_path, class: 'item link' %>
-            <%= link_to "Profil", edit_user_registration_path, class: "item link" %>
-            <%= link_to 'Deconnexion', destroy_user_session_path, method: :delete, class: 'item link'%>
-        <% else %>
-            <%= link_to 'Connexion', new_user_session_path, class: 'item link'%>
-            <% end %>
+            <h1 class='item'><%= link_to 'Ipak', root_path, id:"itemtitle" %></h1>
+
             <div id="contact">
                 <a href=""><%= image_tag("facebook.png", style:"height: 20px; vertical-align:middle;") %></a>
                 <a href=""><%= image_tag("insta.png", style:"height: 20px;vertical-align:middle;") %></a>
@@ -38,5 +31,16 @@
 
         <%= yield %>
 
+        <div id="footer">
+          <div id='loglinks'>
+            <% if current_user %>
+            <%= link_to "Admin", rails_admin_path, class: 'item link' %>
+            <%= link_to "Profil", edit_user_registration_path, class: "item link" %>
+            <%= link_to 'Deconnexion', destroy_user_session_path, method: :delete, class: 'item link'%>
+            <% else %>
+            <%= link_to 'Connexion', new_user_session_path, class: 'item link',style: 'color:white;'%>
+            <% end %>
+          </div>
+          <p> Tous droits réservés © 2016 - Développé par SudoTeam </p>
     </body>
 </html>

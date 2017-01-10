@@ -4,22 +4,29 @@
       <p id="img-show">
         <% if !@post.image.blank? %>
           <%= image_tag(@post.image) %>
+
         <% elsif !@post.video.blank? %>
         <iframe width="560" height="315" src="<%= @post.video.gsub(/watch\?v=/, "embed/") %>" frameborder="0" allowfullscreen>
           <p>La vidéo ne se charge pas, veuillez actualisez la page !</p>
         </iframe>
+
+        <% elsif !@post.title.blank? %>
+      <p id="titreshow">
+        <strong><%= @post.title %></strong>
+      </p>
+
+        <% elsif !@post.title.blank? %>
+      <p id="descriptionshow">
+          <em><%= @post.description %></em>
+      </p>
         <% else %>
           <p></p>
         <% end %>
       </p>
 
-      <p id="titreshow">
-        <strong><%= @post.title %></strong>
-      </p>
 
-      <p id="descriptionshow">
-          <em><%= @post.description %></em>
-      </p>
+
+
 
   </div>
 
