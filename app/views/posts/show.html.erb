@@ -1,34 +1,32 @@
-
-
 <div id='post-show'>
-      <p id="img-show">
+    <p id="img-show">
         <% if !@post.image.blank? %>
-          <%= image_tag(@post.image) %>
-
+        <%= image_tag(@post.image) %>
         <% elsif !@post.video.blank? %>
-        <iframe width="560" height="315" src="<%= @post.video.gsub(/watch\?v=/, "embed/") %>" frameborder="0" allowfullscreen>
-          <p>La vidéo ne se charge pas, veuillez actualisez la page !</p>
+        <iframe width="560" height="315" src="<%= @post.video.gsub(/watch\?v=/, " embed/") %>" frameborder="0" allowfullscreen>
+            <p>La vidéo ne se charge pas, veuillez actualisez la page !</p>
         </iframe>
-
-        <% elsif !@post.title.blank? %>
-      <p id="titreshow">
-        <strong><%= @post.title %></strong>
-      </p>
-
-        <% elsif !@post.title.blank? %>
-      <p id="descriptionshow">
-          <em><%= @post.description %></em>
-      </p>
-        <% else %>
-          <p></p>
+        <%else%>
+        <p></p>
         <% end %>
-      </p>
 
+        <% if !@post.title.blank? %>
+        <p id="titreshow">
+            <strong><%= @post.title %></strong>
+        </p>
+        <%else%>
+        <p></p>
+        <%end%>
 
+        <% if !@post.description.blank? %>
+        <p id="descriptionshow">
+            <em><%= @post.description %></em>
+        </p>
+    <% else %>
+        <p></p>
+        <% end %>
+    </p>
 
+</div>
 
-
-  </div>
-
-
-        <p style='text-align:center;'><%= link_to image_tag("back.png", style:"height: 30px;"), posts_path, id:"back" %>
+<p style='text-align:center;'><%= link_to image_tag("back.png", style:"height: 30px;"), posts_path, id:"back" %>
