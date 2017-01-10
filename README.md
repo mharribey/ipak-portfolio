@@ -30,5 +30,5 @@ Things you may want to cover:
 - git stash apply // Récupère ses modifications locales
 - Résoudre les éventuels conflits
 - git add . // Ajoute les modifications
-- git commit…
+- git commit -m 'yourcommit'
 - git push
