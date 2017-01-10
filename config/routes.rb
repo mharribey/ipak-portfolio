@@ -7,6 +7,11 @@ Rails.application.routes.draw do
         put 'users' => 'devise/registrations#update', :as => 'user_registration'
       end
 
+  devise_scope :user do
+    get '/login'  => 'devise/sessions#new', :as => 'new_user_session_custom'
+    post '/users/sign_in'  => '/login',  as: :user_session_custom
+  end
+
   resources :categories, only: 'show'
   resources :posts
   root 'posts#index'
