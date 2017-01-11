@@ -13,7 +13,6 @@ Rails.application.routes.draw do
 
         get '/developpeur' => 'application#developpeur', as: 'developpeur'
 
-  resources :application, only: 'developpeur'
   resources :categories, only: 'show'
   resources :posts
 

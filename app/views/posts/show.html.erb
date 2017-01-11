@@ -1,5 +1,5 @@
 <div id='post-show'>
-    <p id="img-show">
+    <p id="img-show" style='margin:0;'>
         <% if !@post.image.blank? %>
         <%= image_tag(@post.image) %>
         <% elsif !@post.video.blank? %>
