@@ -13,8 +13,9 @@
  *= require_tree .
  *= require_self
  */
-// $black = #000;
-// $bleu = #1794AC;
+
+
+$primary-color: red;
 
 html {
     margin: 0;
@@ -23,7 +24,7 @@ html {
     body {
         background-color: rgb(251, 251, 251);
 
-        a{
+        a {
           text-decoration: none;
         }
 
@@ -31,7 +32,84 @@ html {
             color: black;
         }
 
+        #profil {
+          border:2px solid $primary-color;
+          margin:auto;
+          text-align: center;
+          padding:4vh;
+          width:35%;
 
+            .field {
+              width:50%;
+              margin: 2vh auto;
+              text-align: center;
+
+              .form-field {
+                text-align: center;
+                width:100%;
+                height:5vh;
+                font-family: 'Slabo 27px', serif;
+                font-size: 1em;
+                background-color: transparent;
+                border:1px solid transparent;
+                border-bottom:1px solid rgba(0,0,0,0.2);
+                outline:none;
+
+                &:focus {
+                  animation-name: cool;
+                  animation-duration: 0.5s;
+                  border:1px solid $primary-color;
+                }
+
+                @keyframes cool {
+                  0% {
+                    border-bottom:1px solid $primary-color;
+                    border-top:1px solid transparent;
+
+                    border-left:1px solid transparent;
+                    border-right:1px solid transparent;
+                  }
+
+                  30% {
+                    border-bottom:1px solid $primary-color;
+                    border-top:1px solid transparent;
+
+                    border-left:1px solid $primary-color;
+                    border-right:1px solid transparent;
+                  }
+
+                  60% {
+                    border-bottom:1px solid $primary-color;
+                    border-top:1px solid $primary-color;
+
+                    border-left:1px solid $primary-color;
+                    border-right:1px solid transparent;
+                  }
+
+                  100% {
+                    border: 1px solid $primary-color;
+                  }
+                }
+              }
+            }
+
+            .button {
+            background-color: transparent;
+            border: 1px solid $primary-color;
+            font-family: 'Slabo 27px', serif;
+            margin-top: 2vh;
+            width:12vh; height:4vh;
+            font-size: 1em;
+            transition: 0.2s;
+
+            &:hover {
+              background-color: $primary-color;
+              border: 1px solid $primary-color;
+              color: white;
+            }
+          }
+
+          }
 
         h2 {
           text-align: center;
@@ -227,9 +305,6 @@ html {
                         .post-content, .post-content:hover, .post-content:visited, .post-content:focus  {
                           color:black;
                         }
-
-
-
                     }
 
                 }
@@ -384,14 +459,14 @@ html {
 
                   .button {
                   background-color: transparent;
-                  border: 1px solid rgb(255, 0, 0);
+                  border: 1px solid $primary-color;
                   font-family: 'Slabo 27px', serif;
                   font-size: 0.8em;
                   transition: 0.2s;
 
                   &:hover {
-                    background-color: rgb(255, 0, 0);
-                    border: 1px solid rgb(255, 0, 0);
+                    background-color: $primary-color;
+                    border: 1px solid $primary-color;
                     color: white;
                   }
 
@@ -424,7 +499,7 @@ html {
                 font-size: 1.2em;
 
                 &:hover {
-                  color: rgb(255, 0, 0);
+                  color: $primary-color;
                 }
             }
         }
@@ -466,7 +541,7 @@ html {
                 font-family: 'Slabo 27px', serif;
 
                 &:hover {
-                  color: rgb(255, 0, 0);
+                  color: $primary-color;
                 }
             }
           }
