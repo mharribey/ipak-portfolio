@@ -9,11 +9,14 @@ Rails.application.routes.draw do
 
       devise_scope :user do
         get '/login'  => 'devise/sessions#new', :as => 'new_user_session_custom'
-        post '/users/sign_in'  => '/login',  as: :user_session_custom
       end
 
+        get '/developpeur' => 'application#developpeur', as: 'developpeur'
+
+  resources :application, only: 'developpeur'
   resources :categories, only: 'show'
   resources :posts
+
   root 'posts#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
