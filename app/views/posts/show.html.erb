@@ -4,8 +4,6 @@
         <%= image_tag(@post.image) %>
         <% elsif !@post.video.blank? %>
         <iframe src="<%= @post.video.gsub(/vimeo\.com\//, 'player.vimeo.com/video/') + '?color=ffffff' %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            <p>La vidéo ne se charge pas, veuillez actualisez la page !</p>
-        </iframe>
         <%else%>
         <p></p>
         <% end %>
