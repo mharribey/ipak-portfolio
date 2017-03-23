@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-$primary-color: red;
+$primary-color: #82BF3A;
 
 html {
     margin: 0;
@@ -102,7 +102,7 @@ html {
             top: 50%;
             left: 50%;
             color: $primary-color;
-            font-family: 'Slabo 27px', serif;
+            font-family: 'Roboto', serif;
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             font-style: normal;
@@ -149,7 +149,7 @@ html {
                     text-align: center;
                     width: 100%;
                     height: 5vh;
-                    font-family: 'Slabo 27px', serif;
+                    font-family: 'Roboto', serif;
                     font-size: 1em;
                     background-color: transparent;
                     border: 1px solid transparent;
@@ -193,7 +193,7 @@ html {
             .button {
                 background-color: transparent;
                 border: 1px solid $primary-color;
-                font-family: 'Slabo 27px', serif;
+                font-family: 'Roboto', serif;
                 margin-top: 2vh;
                 width: 12vh;
                 height: 4vh;
@@ -216,7 +216,7 @@ html {
 
             rect {
                 fill: none;
-                stroke: rgb(255, 0,  0);
+                stroke: #82BF3A;
                 stroke-width: 5;
                 stroke-dasharray: 422, 0;
             }
@@ -241,8 +241,8 @@ html {
         h2 {
             text-align: center;
             margin: 4vh 0;
-            font-family: 'Slabo 27px', serif;
-            color: rgb(255, 0, 0);
+            font-family: 'Roboto', serif;
+            color: #82BF3A;
         }
 
         #nav {
@@ -252,23 +252,23 @@ html {
 
             h1 {
                 font-size: 4em;
-                color: rgb(255, 0, 0);
+                color: #82BF3A;
             }
 
             .item {
                 display: inline-block;
                 vertical-align: middle;
                 padding: 0 4vh;
-                font-family: 'Slabo 27px', serif;
+                font-family: 'Roboto', serif;
 
-                &:hover {
-                    color: rgb(255, 0, 0);
-                }
             }
 
             #itemtitle {
-                color: rgb(255, 0, 0);
-                font-family: 'Playfair Display', serif;
+                color: #82BF3A;
+                font-family: 'Roboto', serif;
+                &:hover {
+                    color: #409377;
+                }
             }
 
             #contact {
@@ -309,13 +309,13 @@ html {
                     text-align: left;
                     margin: 1vh;
                     transition: 0.3s;
-                    font-family: 'Slabo 27px', serif;
+                    font-family: 'Roboto', serif;
 
                     &:hover {
                         font-size: 1.1em;
 
                         a:hover {
-                            color: rgb(255, 0, 0);
+                            color: #82BF3A;
                         }
                     }
                 }
@@ -362,7 +362,7 @@ html {
                     transition: all 0.3s ease;
 
                     &:hover {
-                        border: 1px solid rgb(255, 0, 0);
+                        border: 1px solid #82BF3A;
                     }
 
                     figure {
@@ -382,7 +382,7 @@ html {
                             margin-left: 2vh;
                             font-weight: 600;
                             font-size: 1.2em;
-                            font-family: 'Slabo 27px', serif;
+                            font-family: 'Roboto', serif;
                             color: black;
                         }
 
@@ -396,7 +396,7 @@ html {
                             border-left: 2px solid #f2f2f2;
                             border-radius: 2px;
                             margin-left: 2vh;
-                            font-family: 'Slabo 27px', serif;
+                            font-family: 'Roboto', serif;
                             font-style: italic;
                             color: black;
                         }
@@ -435,7 +435,7 @@ html {
         #post-show {
             background: #FEFEFE;
             background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
-            border: 1px solid rgb(255, 0, 0);
+            border: 1px solid #82BF3A;
             border-radius: 2px;
             margin: 1vh auto;
             width: 50%;
@@ -467,13 +467,13 @@ html {
             #titreshow {
                 font-weight: 600;
                 font-size: 1.5em;
-                font-family: 'Slabo 27px', serif;
+                font-family: 'Roboto', serif;
                 display: block;
                 margin: 0 3vh;
             }
 
             #descriptionshow {
-                font-family: 'Slabo 27px', serif;
+                font-family: 'Roboto', serif;
                 display: block;
                 height: auto;
                 width: 75%;
@@ -515,7 +515,7 @@ html {
             transition: 0.2s;
             color: black;
             position: relative;
-            font-family: 'Slabo 27px', serif;
+            font-family: 'Roboto', serif;
             font-size: 1.2em;
             border: 1px solid transparent;
 
@@ -529,7 +529,7 @@ html {
 
             rect {
                 fill: none;
-                stroke: rgb(255, 0, 0);
+                stroke: #82BF3A;
                 stroke-width: 5;
                 stroke-dasharray: 422, 0;
             }
@@ -556,7 +556,7 @@ html {
                 .logyou {
                     background-color: transparent;
                     border-radius: 2px;
-                    border-bottom: 2px rgb(255, 0, 0) solid;
+                    border-bottom: 2px #82BF3A solid;
                     border-top: 0;
                     border-left: 0;
                     border-right: 0;
@@ -566,7 +566,7 @@ html {
                     transition: 0.2s;
                     text-align: center;
                     padding-bottom: 5px;
-                    font-family: 'Slabo 27px', serif;
+                    font-family: 'Roboto', serif;
                     font-size: 0.9em;
 
                     &:focus {
@@ -579,7 +579,7 @@ html {
                     .button {
                         background-color: transparent;
                         border: 1px solid $primary-color;
-                        font-family: 'Slabo 27px', serif;
+                        font-family: 'Roboto', serif;
                         font-size: 0.8em;
                         transition: 0.2s;
 
@@ -610,7 +610,7 @@ html {
             }
 
             #link2 {
-                font-family: 'Slabo 27px', serif;
+                font-family: 'Roboto', serif;
                 padding-left: 3vh;
                 border-left: 2px solid black;
                 font-size: 1.2em;
@@ -622,7 +622,7 @@ html {
         }
 
         .link {
-            font-family: 'Slabo 27px', sans-serif;
+            font-family: 'Roboto', sans-serif;
             font-size: 1.2em;
             padding-left: 3vh;
         }
@@ -632,7 +632,7 @@ html {
             margin: 5vh auto;
             text-align: center;
             font-weight: light;
-            font-family: 'Slabo 27px', sans-serif;
+            font-family: 'Roboto', sans-serif;
 
             a {
                 padding: 0;
@@ -655,7 +655,7 @@ html {
                     display: inline-block;
                     vertical-align: middle;
                     padding: 0 4vh;
-                    font-family: 'Slabo 27px', serif;
+                    font-family: 'Roboto', serif;
 
                     &:hover {
                         color: $primary-color;

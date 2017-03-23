@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
 
     <body>
@@ -21,10 +21,11 @@
             <h1 class='item'><%= link_to 'ONO', root_path, id:"itemtitle" %></h1>
 
             <div id="contact">
-                <a href=""><%= image_tag("facebook.png", class:"reseaux") %></a>
-                <a href=""><%= image_tag("insta.png", class:"reseaux") %></a>
-                <a href=""><%= image_tag("twitter.png", class:"reseaux") %></a>
-                <a href=""><%= image_tag("youtube.png", class:"reseaux") %></a>
+              <% if user_signed_in? %>
+                <p class="reseaux"> Bienvenue <span style='color:#82BF3A;'><%= current_user.email %></span> !</p>
+              <% else %>
+                <%= link_to "Login", new_user_session_custom_path, class:"reseaux",style:'text-transform:uppercase;' %>
+              <% end %>
             </div>
 
         </div>
@@ -39,6 +40,6 @@
               <%= link_to 'Deconnexion', destroy_user_session_path, method: :delete, class: 'item link'%>
             <% end %>
           </div>
-          <p> Tous droits réservés © 2016 - Développé par <%= link_to 'SudoTeam', developpeur_path, style: 'color:red' %></p>
+          <p> Tous droits réservés © 2016 - Développé par <%= link_to 'SudoTeam', developpeur_path, style: 'color:#82BF3A;' %></p>
     </body>
 </html>
