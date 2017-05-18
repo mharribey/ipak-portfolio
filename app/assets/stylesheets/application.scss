@@ -478,6 +478,42 @@ html {
                 height: auto;
                 width: 75%;
                 margin: 2vh auto 4vh;
+
+                form{
+                  .input-form {
+                    border: 1px solid transparent;
+                    border-left: 1px solid $primary-color;
+                    font-family: 'Roboto', serif;
+                    font-size: 1em;
+                    font-style: italic;
+                    padding-left: 2em;
+                    outline:none;
+                    background: transparent;
+                    width:90%;
+                    vertical-align: text-top;
+                    margin-bottom: 1.5em;
+                  }
+
+                #submit {
+                  border: 1px solid $primary-color;
+                  font-family: 'Roboto', serif;
+                  font-size: 1em;
+                  text-align: center;
+                  outline:none;
+                  padding:0.2em 0.5em;
+                  color:white;
+                  background-color: $primary-color;
+                  -webkit-transition: 0.3s;
+                  -o-transition: 0.3s;
+                  transition: 0.3s;
+                  width:8em;
+
+                  &:hover {
+                    background-color: white;
+                    color:$primary-color;
+                  }
+                }
+              }
             }
         }
 

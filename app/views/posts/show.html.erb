@@ -17,10 +17,18 @@
         <%end%>
 
         <% if !@post.description.blank? %>
-        <p id="descriptionshow">
-            <em><%= @post.description %></em>
-        </p>
-    <% else %>
+        <div id="descriptionshow">
+            <% if user_signed_in? %>
+              <%= form_for(@post) do |post| %>
+                <%= post.text_field :title, type:"hidden" %>
+                <%= post.text_area :description, class:"input-form" %>
+                <%= post.submit id:'submit'%>
+              <% end %>
+            <% else %>
+              <em><%= @post.description %></em>
+            <% end %>
+        </div>
+        <% else %>
         <p></p>
         <% end %>
     </p>
