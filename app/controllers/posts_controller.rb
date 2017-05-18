@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.order(title: :desc)
+    @posts = Post.all.order(title: :asc)
     @categories = Category.all.order(name: :desc)
   end
 
